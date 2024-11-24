@@ -1,5 +1,7 @@
 # zero2prod book project
 
+Book's repo: https://github.com/LukeMathWalker/zero-to-production
+
 ## Setup
 
 ```sh
