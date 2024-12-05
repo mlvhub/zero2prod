@@ -64,7 +64,7 @@ async fn subscribe_returns_a_400_when_data_is_missing() {
 fn spawn_app() -> Result<String, std::io::Error> {
     let listener = TcpListener::bind("127.0.0.1:0")?;
     let port = listener.local_addr()?.port();
-    let server = zero2prod::run(listener)?;
-    let _ = tokio::spawn(server);
+    let server = zero2prod::startup::run(listener)?;
+    tokio::spawn(server);
     Ok(format!("http://127.0.0.1:{}", port))
 }
