@@ -28,7 +28,7 @@ then
     echo >&2 "    docker kill ${RUNNING_POSTGRES_CONTAINER}"
     exit 1
   fi
-  CONTAINER_NAME="postgres_$(date '+%s')"
+  CONTAINER_NAME="postgres"
   # Launch postgres using Docker
   docker run \
       --env POSTGRES_USER=${SUPERUSER} \
