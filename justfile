@@ -12,3 +12,6 @@ test:
 
 dev:
 	cargo watch -x check -x test -x run
+
+udeps:
+	cargo +nightly udeps
